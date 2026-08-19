@@ -1,0 +1,326 @@
+html {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(https://blenderartists.org/uploads/default/eeccf19fff01eb954dcd3e58778205698a0d6d91);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+
+}
+
+
+
+#slider {
+    overflow: hidden;
+}
+
+
+#slider figure {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 20s slider infinite;
+    padding: 10px 20px;
+}
+
+
+#slider figure img {
+    float: left;
+    width: 10%;
+    border-style: solid;
+    border-color: #0a002d;
+    border-width: 10px;
+}
+
+
+@keyframes slider {
+    0% {
+        left: 0;
+    }
+
+    20% {
+        left: 0;
+    }
+
+    25% {
+        left: -105%;
+    }
+
+    45% {
+        left: -110%;
+    }
+
+    50% {
+        left: -100%;
+    }
+
+    70% {
+        left: -100%;
+    }
+}
+
+
+
+
+label {
+    color: #ffffff;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-family: "Press Start 2P";
+    font-size: larger;
+}
+
+
+h2 {
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    font-family: "Press Start 2P";
+}
+
+h3 {
+    color: white;
+    font-family: "Press Start 2P";
+    text-align: center;
+}
+
+p {
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Navigation */
+nav {
+    background: #0f0e0e;
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    font-family: "Press Start 2P";
+    opacity: 0.65;
+}
+
+nav a {
+    color: #fbfafa;
+    padding: 10px 30px;
+}
+
+nav a:hover {
+    background: linear-gradient(to bottom, rgb(118, 118, 118), #0f0f0f);
+}
+
+.page {
+    display: none;
+    background: rgba(0, 0, 0, 0.162);
+}
+
+.active {
+    display: block;
+}
+
+.contact {
+    text-align: center;
+}
+
+/*Games Page*/
+
+.hid_filters {
+    display: none;
+    padding: 20px;
+    background: #3d3d3d32;
+    border-color: #ffffff;
+    border-radius: 12px;
+}
+
+select {
+    padding: 10px;
+    border: none;
+    background: #000000;
+    color: #f1efef;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.toggle {
+    float: right;
+}
+
+.button,
+.wishlist_button,
+.cart_button {
+    padding: 10px;
+    border: none;
+    background: #000000;
+    color: #f1efef;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.button:hover,
+.wishlist_button:hover,
+.cart_button:hover {
+    background: linear-gradient(to bottom, #5d5d5d, #080808);
+}
+
+
+.game_container {
+    background: #3d3d3d5c;
+    padding: 0px;
+    border-radius: 8px;
+    border: 1px solid;
+}
+
+.game_container:hover {
+    background: radial-gradient(#b6b6b67e, #3d3d3d32);
+}
+
+.game_title {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    font-family: "Press Start 2P";
+}
+
+.price {
+    color: #15ff00
+}
+
+/*Game Page grid format*/
+#gamesList.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 15px;
+}
+
+#gamesList.grid .game_container {
+    display: grid;
+    grid-template-columns: 1fr 100px;
+    gap: 10px;
+}
+
+#gamesList.grid .game_title {
+    grid-column: 1 / -1;
+}
+
+/*Game Page list format*/
+#gamesList.list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#gamesList.list .game_container {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+}
+
+.details_left p,
+.details_right p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    text-align: left;
+}
+
+#gamesList.list .details_left,
+#gamesList.list .details_right {
+    display: contents;
+    float: none;
+}
+
+#gamesList.list .game_container p {
+
+    text-align: left;
+    display: grid;
+    grid-template-columns: 60px auto;
+
+}
+
+/*Game Detail format*/
+.buttons {
+    text-align: center;
+}
+
+.specbox {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+.specbox p {
+    text-align: left;
+}
+
+/*Cart format*/
+.cart_items {
+    background-color: rgba(0, 0, 0, 0.4);
+    gap: 5px;
+}
+
+.center {
+    text-align: center;
+}
+
+.loader {
+    display: none;
+}
+
+.loader h3 {
+    display: inline-flex;
+    align-items: center;
+}
+
+.loadest {
+    display: inline-block;
+    border: 10px solid #444444;
+    border-top: 10px solid #e8e8e8;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.receipt {
+    max-width: 700px;
+    margin: auto;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 1);
+    background-color: #0000002e;
+}
+
+.receipt_games {
+    border: #686868 solid;
+    gap: 10;
+}
+
+
+form {
+    text-align: center;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
